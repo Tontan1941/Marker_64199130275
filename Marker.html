@@ -1,0 +1,147 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Marker</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css">
+  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+
+
+</head>
+<body>
+<body bgcolor="C1FFAD">
+<h1><font color = "blue"><CENTER>💚Welcome to my website💚</h1></font></CENTER>
+<br>
+
+
+
+<hr>
+<br>
+
+<CENTER><img src="logo_color.png" width="200cm" height="200cm"></CENTER>
+
+<CENTER><p><h2>ผู้จัดทำ</h2></CENTER>
+<CENTER><p><h2>ชื่อ นาย ปิติภัทร สุวรรณสัมฤทธิ์</h2></p></CENTER>
+<CENTER><p><h2>รหัสนิสิต 64191130275</h2></p></CENTER>
+
+<center>
+  <div id="map" style="width: 500px; height: 500px;"></div>
+</center>
+
+  <!-- <--embeded map -->
+  <!-- จุดที่ 1 -->
+  <script>
+  var map = L.map('map').setView([13.87364, 100.4766],10);
+  mapLink ='<a href="https://www.google.com/maps">Googlemap</a>';
+  L.tileLayer(
+  'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; ' + mapLink + ' Contributors',
+  maxZoom: 22,
+  }).addTo(map);
+
+ // กำหนดตัว marker
+  var travel1 = L.icon({
+  iconUrl: 'ศาลากลางจังหวัดนนทบุรีหลังเก่า.jpg',
+
+   iconSize: [50, 46], // size of the icon
+  });
+
+  var travel2 = L.icon({
+  iconUrl: 'วัดชมภูเวก.jpg',
+
+   iconSize: [60, 40], // size of the icon
+  });
+
+  var travel3 = L.icon({
+  iconUrl: 'รังนก คาเฟ่ และ บาร์ Rangnok Cafe & Bar.jpg',
+
+   iconSize: [60, 40], // size of the icon
+  });
+
+  var travel4 = L.icon({
+  iconUrl: 'แหล่งท่องเที่ยวเชิงเกษตร สวนมาลัยบัววิคตอเรีย.jpg',
+
+   iconSize: [60, 40], // size of the icon
+  });
+
+  var travel5 = L.icon({
+  iconUrl: 'Boonta Flowers and Cafe.jpg',
+
+   iconSize: [60, 40], // size of the icon
+  });
+
+  var marker = L.marker([13.84234,100.49224],
+    {
+      icon: travel1,
+      draggaable:true,
+      title: 'ศาลากลางจังหวัดนนทบุรีหลังเก่า',
+      opacity: 1.5
+    }
+  )
+      .addTo(map)
+      .bindPopup("<b>ศาลากลางจังหวัดนนทบุรีหลังเก่า</b>")
+      .openPopup();
+
+// จุดที่ 2
+
+  var marker = L.marker([13.88719, 100.49609],
+    {
+      icon: travel2,
+      draggaable:true,
+      title: 'วัดชมภูเวก',
+      opacity: 1.5
+    }
+  )
+      .addTo(map)
+      .bindPopup("<b>วัดชมภูเวก</b>")
+      .openPopup();
+
+// จุดที่ 3
+
+      var marker = L.marker([13.91607, 100.47725],
+        {
+          icon: travel3,
+          draggaable:true,
+          title: 'รังนก คาเฟ่ และ บาร์ Rangnok Cafe & Bar',
+          opacity: 1.5
+        }
+      )
+          .addTo(map)
+          .bindPopup("<b>รังนก คาเฟ่ และ บาร์ Rangnok Cafe & Bar</b>")
+          .openPopup();
+
+// จุดที่ 4
+
+      var marker = L.marker([13.93906, 100.43094],
+          {
+            icon: travel4,
+            draggaable:true,
+            title: 'แหล่งท่องเที่ยวเชิงเกษตร สวนมาลัยบัววิคตอเรีย',
+            opacity: 1.5
+          }
+        )
+            .addTo(map)
+            .bindPopup("<b>แหล่งท่องเที่ยวเชิงเกษตร สวนมาลัยบัววิคตอเรีย</b>")
+            .openPopup();
+
+// จุดที่ 5
+
+      var marker = L.marker([13.81032, 100.4718],
+          {
+            icon: travel5,
+            draggaable:true,
+            title: 'Boonta Flowers and Cafe',
+            opacity: 1.5
+          }
+        )
+            .addTo(map)
+            .bindPopup("<b>Boonta Flowers and Cafe์</b>")
+            .openPopup();
+
+
+
+  </script>
+
+</body>
+</html>
